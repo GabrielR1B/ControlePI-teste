@@ -24,7 +24,7 @@
 
 		echo $this->Form->input('reivindicacoes',array('label'=>'Quadro Reivindicatório'));
 		echo $this->Form->input('data', array('separator' => ' . ', 'dateFormat' => 'DMY', 'minYear' => date('Y') - 70, 'maxYear' => date('Y') + 2 ));
-		echo $this->Form->input('prioridade_interna_id', array('empty' => '', 'id'=>'prioridade_interna_id', 'label' => 'Prioridade Interna','rows'=>'1'));
+		echo $this->Form->input('prioridade_interna_id', array('empty' => '', 'id'=>'prioridade_interna_id', 'label' => 'Prioridade Interna'));
 		echo $this->Form->input('naturezatecnologia_id', array('empty' => '', 'label' => 'Natureza' ));
 		echo $this->Form->input('redator_id', array('empty' => '', 'label' => 'Redator'));
 		echo $this->Form->input('area_id', array('empty' => ''));

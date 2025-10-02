@@ -1,30 +1,40 @@
 <?php
 class Tecnologia extends AppModel {
+	/**
+	 * Gera regra de validação obrigatória padronizada
+	 */
+	private function requiredField($fieldLabel) {
+		return array(
+			'notempty' => array(
+				'rule' => array('notempty'),
+				'message' => "O campo $fieldLabel é obrigatório.",
+				'allowEmpty' => false,
+				'required' => true,
+			),
+		);
+	}
+	var $validate = array(
+		'titulo' => null,
+		'num_pedido' => null,
+		'data' => null,
+		'pasta' => null,
+		'natureza_id' => null,
+		'area_id' => null,
+		'status_id' => null,
+		'andamento_id' => null,
+		'redator_id' => null,
+		'pais_id' => null,
+	);
+	function __construct($id = false, $table = null, $ds = null) {
+		parent::__construct($id, $table, $ds);
+		$this->validate['titulo'] = $this->requiredField('Título');
+		$this->validate['num_pedido'] = $this->requiredField('Número do Pedido');
+		$this->validate['pasta'] = $this->requiredField('Pasta');
+	}
+
 	var $name = 'Tecnologia';
 	var $displayField = 'titulo';
 	
-	var $validate = array(
-		'titulo' => array(
-			'notempty' => array(
-				'rule' => array('notempty'),
-				//'message' => 'Your custom message here',
-				//'allowEmpty' => false,
-				//'required' => false,
-				//'last' => false, // Stop validation after this rule
-				//'on' => 'create', // Limit validation to 'create' or 'update' operations
-			),
-		),
-		'num_pedido' => array(
-			'notempty' => array(
-				'rule' => array('notempty'),
-				//'message' => 'Your custom message here',
-				//'allowEmpty' => false,
-				//'required' => false,
-				//'last' => false, // Stop validation after this rule
-				//'on' => 'create', // Limit validation to 'create' or 'update' operations
-			),
-		)
-	);
 
 	var $hasMany = array(
 		'Arquivo' => array(
