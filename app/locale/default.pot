@@ -1,0 +1,680 @@
+# LANGUAGE translation of CakePHP Application
+# Copyright YEAR NAME <EMAIL@ADDRESS>
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"POT-Creation-Date: 2011-04-11 10:57-0300\n"
+"PO-Revision-Date: YYYY-mm-DD HH:MM+ZZZZ\n"
+"Last-Translator: NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+
+#: /controllers/areas_controller.php:19;47
+msgid "Invalid area"
+msgstr ""
+
+#: /controllers/areas_controller.php:37;52
+msgid "The area has been saved"
+msgstr ""
+
+#: /controllers/areas_controller.php:40;55
+msgid "The area could not be saved. Please, try again."
+msgstr ""
+
+#: /controllers/areas_controller.php:65
+msgid "Invalid id for area"
+msgstr ""
+
+#: /controllers/areas_controller.php:69
+msgid "Area deleted"
+msgstr ""
+
+#: /controllers/areas_controller.php:72
+msgid "Area was not deleted"
+msgstr ""
+
+#: /controllers/inventores_controller.php:106;135
+msgid "Invalid inventor"
+msgstr ""
+
+#: /controllers/inventores_controller.php:124;140
+msgid "The inventor has been saved"
+msgstr ""
+
+#: /controllers/inventores_controller.php:127;143
+msgid "The inventor could not be saved. Please, try again."
+msgstr ""
+
+#: /controllers/inventores_controller.php:155
+msgid "Invalid id for inventor"
+msgstr ""
+
+#: /controllers/inventores_controller.php:159
+msgid "Inventor deleted"
+msgstr ""
+
+#: /controllers/inventores_controller.php:162
+msgid "Inventor was not deleted"
+msgstr ""
+
+#: /controllers/situacoes_controller.php:13;41
+msgid "Invalid situacao"
+msgstr ""
+
+#: /controllers/situacoes_controller.php:31;46
+msgid "The situacao has been saved"
+msgstr ""
+
+#: /controllers/situacoes_controller.php:34;49
+msgid "The situacao could not be saved. Please, try again."
+msgstr ""
+
+#: /controllers/situacoes_controller.php:59
+msgid "Invalid id for situacao"
+msgstr ""
+
+#: /controllers/situacoes_controller.php:63
+msgid "Situacao deleted"
+msgstr ""
+
+#: /controllers/situacoes_controller.php:66
+msgid "Situacao was not deleted"
+msgstr ""
+
+#: /controllers/status_controller.php:13;41
+msgid "Invalid status"
+msgstr ""
+
+#: /controllers/status_controller.php:31;46
+msgid "The status has been saved"
+msgstr ""
+
+#: /controllers/status_controller.php:34;49
+msgid "The status could not be saved. Please, try again."
+msgstr ""
+
+#: /controllers/status_controller.php:59
+msgid "Invalid id for status"
+msgstr ""
+
+#: /controllers/status_controller.php:63
+msgid "Status deleted"
+msgstr ""
+
+#: /controllers/status_controller.php:66
+msgid "Status was not deleted"
+msgstr ""
+
+#: /controllers/tecnologias_controller.php:30;54;83
+msgid "Invalid tecnologia"
+msgstr ""
+
+#: /controllers/tecnologias_controller.php:40;59
+msgid "The tecnologia has been saved"
+msgstr ""
+
+#: /controllers/tecnologias_controller.php:43;62
+msgid "The tecnologia could not be saved. Please, try again."
+msgstr ""
+
+#: /controllers/tecnologias_controller.php:90
+msgid "Inventor desassociado com sucesso"
+msgstr ""
+
+#: /controllers/tecnologias_controller.php:200
+msgid "Invalid id for tecnologia"
+msgstr ""
+
+#: /controllers/tecnologias_controller.php:204
+msgid "Tecnologia deleted"
+msgstr ""
+
+#: /controllers/tecnologias_controller.php:207
+msgid "Tecnologia was not deleted"
+msgstr ""
+
+#: /controllers/tecnologias_controller.php:239
+msgid "Inventor desassociado com sucesso."
+msgstr ""
+
+#: /controllers/tecnologias_controller.php:241
+msgid "Houve um erro ao desassociar este inventor. Saia do sistema e tente novamente."
+msgstr ""
+
+#: /controllers/tecnologias_controller.php:264
+msgid "Este inventor já está associado com esta tecnologia."
+msgstr ""
+
+#: /controllers/tecnologias_controller.php:283
+msgid "Inventor associado com sucesso."
+msgstr ""
+
+#: /controllers/tecnologias_controller.php:285
+#: /views/tecnologias/edit.ctp:63
+msgid "Houve um erro ao associar este inventor. Saia do sistema e tente novamente."
+msgstr ""
+
+#: /views/areas/add.ctp:3
+#: /views/areas/edit.ctp:3
+#: /views/areas/view.ctp:3
+msgid "List Areas"
+msgstr ""
+
+#: /views/areas/add.ctp:4
+#: /views/areas/edit.ctp:4
+#: /views/areas/index.ctp:3
+#: /views/areas/view.ctp:4
+msgid "New Area"
+msgstr ""
+
+#: /views/areas/add.ctp:9
+msgid "Add Area"
+msgstr ""
+
+#: /views/areas/add.ctp:16
+#: /views/areas/edit.ctp:19
+#: /views/inventores/add.ctp:20
+#: /views/inventores/edit.ctp:20
+#: /views/inventores/search.ctp:25
+#: /views/situacoes/add.ctp:17
+#: /views/situacoes/edit.ctp:19
+#: /views/status/add.ctp:17
+#: /views/status/edit.ctp:19
+#: /views/tecnologias/add.ctp:23
+#: /views/tecnologias/edit.ctp:45
+#: /views/tecnologias/search.ctp:31
+msgid "Submit"
+msgstr ""
+
+#: /views/areas/edit.ctp:5
+msgid "excluir Área"
+msgstr ""
+
+#: /views/areas/edit.ctp:5
+#: /views/areas/index.ctp:33
+#: /views/areas/view.ctp:6;56
+#: /views/inventores/edit.ctp:6
+#: /views/inventores/index.ctp:52
+#: /views/inventores/search.ctp:59
+#: /views/inventores/view.ctp:7;61
+#: /views/situacoes/edit.ctp:5
+#: /views/situacoes/index.ctp:33
+#: /views/situacoes/view.ctp:6;56
+#: /views/status/edit.ctp:5
+#: /views/status/index.ctp:33
+#: /views/status/view.ctp:6;56
+#: /views/tecnologias/search.ctp:85
+#: /views/tecnologias/view.ctp:7
+msgid "Are you sure you want to delete # %s?"
+msgstr ""
+
+#: /views/areas/edit.ctp:9
+#: /views/areas/view.ctp:5
+msgid "Edit Area"
+msgstr ""
+
+#: /views/areas/index.ctp:8
+#: /views/layouts/default.ctp:19
+msgid "Areas"
+msgstr ""
+
+#: /views/areas/index.ctp:14
+#: /views/areas/view.ctp:35
+#: /views/inventores/index.ctp:30
+#: /views/inventores/search.ctp:39
+#: /views/inventores/view.ctp:40
+#: /views/situacoes/index.ctp:14
+#: /views/situacoes/view.ctp:35
+#: /views/status/index.ctp:14
+#: /views/status/view.ctp:35
+#: /views/tecnologias/index.ctp:34
+#: /views/tecnologias/search.ctp:48
+#: /views/tecnologias/view.ctp:51
+msgid "Actions"
+msgstr ""
+
+#: /views/areas/index.ctp:31
+#: /views/areas/view.ctp:54
+#: /views/inventores/index.ctp:50
+#: /views/inventores/search.ctp:57
+#: /views/inventores/view.ctp:59
+#: /views/situacoes/index.ctp:31
+#: /views/situacoes/view.ctp:54
+#: /views/status/index.ctp:31
+#: /views/status/view.ctp:54
+#: /views/tecnologias/index.ctp:73
+#: /views/tecnologias/search.ctp:83
+#: /views/tecnologias/view.ctp:66
+msgid "View"
+msgstr ""
+
+#: /views/areas/index.ctp:32
+#: /views/areas/view.ctp:55
+#: /views/inventores/index.ctp:51
+#: /views/inventores/search.ctp:58
+#: /views/inventores/view.ctp:60
+#: /views/situacoes/index.ctp:32
+#: /views/situacoes/view.ctp:55
+#: /views/status/index.ctp:32
+#: /views/status/view.ctp:55
+#: /views/tecnologias/index.ctp:74
+#: /views/tecnologias/search.ctp:84
+#: /views/tecnologias/view.ctp:67
+msgid "Edit"
+msgstr ""
+
+#: /views/areas/index.ctp:33
+#: /views/areas/view.ctp:56
+#: /views/inventores/index.ctp:52
+#: /views/inventores/search.ctp:59
+#: /views/inventores/view.ctp:61
+#: /views/situacoes/index.ctp:33
+#: /views/situacoes/view.ctp:56
+#: /views/status/index.ctp:33
+#: /views/status/view.ctp:56
+#: /views/tecnologias/index.ctp:75
+#: /views/tecnologias/search.ctp:85
+msgid "Delete"
+msgstr ""
+
+#: /views/areas/index.ctp:41
+#: /views/inventores/index.ctp:15
+#: /views/situacoes/index.ctp:41
+#: /views/status/index.ctp:41
+#: /views/tecnologias/index.ctp:15
+msgid "Page %page% of %pages%, showing %current% records out of %count% total, starting on record %start%, ending on %end%"
+msgstr ""
+
+#: /views/areas/index.ctp:46
+#: /views/inventores/index.ctp:20;59
+#: /views/situacoes/index.ctp:46
+#: /views/status/index.ctp:46
+#: /views/tecnologias/index.ctp:20;82
+msgid "previous"
+msgstr ""
+
+#: /views/areas/index.ctp:49
+#: /views/inventores/index.ctp:23;62
+#: /views/situacoes/index.ctp:49
+#: /views/status/index.ctp:49
+#: /views/tecnologias/index.ctp:23;85
+msgid "next"
+msgstr ""
+
+#: /views/areas/view.ctp:6
+msgid "Delete Area"
+msgstr ""
+
+#: /views/areas/view.ctp:11
+#: /views/tecnologias/view.ctp:31
+msgid "Area"
+msgstr ""
+
+#: /views/areas/view.ctp:13
+#: /views/inventores/view.ctp:17
+#: /views/situacoes/view.ctp:13
+#: /views/status/view.ctp:13
+#: /views/tecnologias/view.ctp:50
+msgid "Nome"
+msgstr ""
+
+#: /views/areas/view.ctp:22
+#: /views/inventores/view.ctp:28
+#: /views/situacoes/view.ctp:22
+#: /views/status/view.ctp:22
+msgid "Tecnologias Relacionadas"
+msgstr ""
+
+#: /views/areas/view.ctp:25
+#: /views/inventores/view.ctp:30
+#: /views/situacoes/view.ctp:25
+#: /views/status/view.ctp:25
+msgid "Foram encontradas <strong>%d</strong> tecnologias relacionadas."
+msgstr ""
+
+#: /views/areas/view.ctp:29
+#: /views/inventores/index.ctp:28
+#: /views/inventores/search.ctp:37
+#: /views/inventores/view.ctp:34
+#: /views/situacoes/view.ctp:29
+#: /views/status/view.ctp:29
+#: /views/tecnologias/index.ctp:28
+#: /views/tecnologias/search.ctp:42
+#: /views/tecnologias/view.ctp:49
+msgid "#"
+msgstr ""
+
+#: /views/areas/view.ctp:30
+#: /views/inventores/view.ctp:35
+#: /views/situacoes/view.ctp:30
+#: /views/status/view.ctp:30
+#: /views/tecnologias/view.ctp:16
+msgid "Titulo"
+msgstr ""
+
+#: /views/areas/view.ctp:31
+#: /views/inventores/view.ctp:36
+#: /views/situacoes/view.ctp:31
+#: /views/status/view.ctp:31
+#: /views/tecnologias/search.ctp:44
+msgid "Núm Pedido"
+msgstr ""
+
+#: /views/areas/view.ctp:32
+#: /views/inventores/view.ctp:37
+#: /views/situacoes/view.ctp:32
+#: /views/status/view.ctp:32
+#: /views/tecnologias/search.ctp:45
+#: /views/tecnologias/view.ctp:26
+msgid "Data"
+msgstr ""
+
+#: /views/areas/view.ctp:33
+#: /views/inventores/view.ctp:38
+#: /views/situacoes/view.ctp:33
+#: /views/status/view.ctp:33
+#: /views/tecnologias/search.ctp:46
+msgid "Área"
+msgstr ""
+
+#: /views/areas/view.ctp:34
+#: /views/inventores/view.ctp:39
+#: /views/situacoes/view.ctp:34
+#: /views/status/view.ctp:34
+#: /views/tecnologias/search.ctp:47
+msgid "Situação"
+msgstr ""
+
+#: /views/areas/view.ctp:62
+msgid "Não foram encontradas tecnologias relacionadas com esta área."
+msgstr ""
+
+#: /views/inventores/add.ctp:3
+#: /views/inventores/index.ctp:3
+#: /views/inventores/search.ctp:3
+#: /views/inventores/view.ctp:3
+msgid "Listar Inventores"
+msgstr ""
+
+#: /views/inventores/add.ctp:4
+#: /views/inventores/index.ctp:4
+#: /views/inventores/search.ctp:4
+#: /views/inventores/view.ctp:4
+msgid "New Inventor"
+msgstr ""
+
+#: /views/inventores/add.ctp:5
+#: /views/inventores/edit.ctp:5
+#: /views/inventores/index.ctp:5
+#: /views/inventores/search.ctp:5
+#: /views/inventores/view.ctp:5
+msgid "Buscar Inventores"
+msgstr ""
+
+#: /views/inventores/add.ctp:10
+msgid "Add Inventor"
+msgstr ""
+
+#: /views/inventores/add.ctp:16
+#: /views/inventores/edit.ctp:16
+msgid "Nome Completo"
+msgstr ""
+
+#: /views/inventores/edit.ctp:3
+msgid "List Inventores"
+msgstr ""
+
+#: /views/inventores/edit.ctp:4
+msgid "Adicionar Inventor"
+msgstr ""
+
+#: /views/inventores/edit.ctp:6
+msgid "excluir Inventor"
+msgstr ""
+
+#: /views/inventores/edit.ctp:11
+msgid "Editar Inventor"
+msgstr ""
+
+#: /views/inventores/index.ctp:10
+#: /views/inventores/search.ctp:10
+#: /views/tecnologias/view.ctp:45
+msgid "Inventores"
+msgstr ""
+
+#: /views/inventores/search.ctp:30
+msgid "Foram encontrados <strong>%d</strong> autores."
+msgstr ""
+
+#: /views/inventores/search.ctp:32
+msgid "Foi encontrado <strong>%d</strong> autor."
+msgstr ""
+
+#: /views/inventores/search.ctp:38
+msgid "nome"
+msgstr ""
+
+#: /views/inventores/view.ctp:6
+msgid "Edit Inventor"
+msgstr ""
+
+#: /views/inventores/view.ctp:7
+msgid "Delete Inventor"
+msgstr ""
+
+#: /views/inventores/view.ctp:12
+msgid "Inventor"
+msgstr ""
+
+#: /views/inventores/view.ctp:21
+msgid "Contatos"
+msgstr ""
+
+#: /views/inventores/view.ctp:67
+msgid "Não foram encontradas tecnologias relacionadas com este inventor."
+msgstr ""
+
+#: /views/layouts/default.ctp:8
+#: /views/layouts/user_login.ctp:7
+msgid "CTIT | Controle de PI"
+msgstr ""
+
+#: /views/layouts/default.ctp:17
+msgid "Technologies"
+msgstr ""
+
+#: /views/layouts/default.ctp:18
+msgid "Inventors"
+msgstr ""
+
+#: /views/layouts/default.ctp:20
+msgid "Situations"
+msgstr ""
+
+#: /views/layouts/default.ctp:21
+#: /views/status/index.ctp:8
+#: /views/status/view.ctp:11
+msgid "Status"
+msgstr ""
+
+#: /views/layouts/default.ctp:36
+#: /views/layouts/user_login.ctp:19
+msgid "Coordenadoria de Transferência e Inovação Tecnológica"
+msgstr ""
+
+#: /views/situacoes/add.ctp:3
+#: /views/situacoes/edit.ctp:3
+#: /views/situacoes/view.ctp:3
+#: /views/status/view.ctp:3
+msgid "List Situacoes"
+msgstr ""
+
+#: /views/situacoes/add.ctp:4
+#: /views/situacoes/edit.ctp:4
+#: /views/situacoes/index.ctp:3
+#: /views/situacoes/view.ctp:4
+msgid "New Situacao"
+msgstr ""
+
+#: /views/situacoes/add.ctp:8
+msgid "Add Situacao"
+msgstr ""
+
+#: /views/situacoes/edit.ctp:5
+msgid "excluir Situação"
+msgstr ""
+
+#: /views/situacoes/edit.ctp:10
+#: /views/situacoes/view.ctp:5
+msgid "Edit Situacao"
+msgstr ""
+
+#: /views/situacoes/index.ctp:8
+msgid "Situacoes"
+msgstr ""
+
+#: /views/situacoes/view.ctp:6
+msgid "Delete Situacao"
+msgstr ""
+
+#: /views/situacoes/view.ctp:11
+#: /views/tecnologias/view.ctp:36
+msgid "Situacao"
+msgstr ""
+
+#: /views/situacoes/view.ctp:62
+#: /views/status/view.ctp:62
+msgid "Não foram encontradas tecnologias relacionadas com esta situação."
+msgstr ""
+
+#: /views/status/add.ctp:3
+#: /views/status/edit.ctp:3
+msgid "List Status"
+msgstr ""
+
+#: /views/status/add.ctp:4
+#: /views/status/edit.ctp:4
+#: /views/status/index.ctp:3
+#: /views/status/view.ctp:4
+msgid "New Status"
+msgstr ""
+
+#: /views/status/add.ctp:8
+msgid "Add Status"
+msgstr ""
+
+#: /views/status/edit.ctp:5
+msgid "excluir Status"
+msgstr ""
+
+#: /views/status/edit.ctp:10
+#: /views/status/view.ctp:5
+msgid "Edit Status"
+msgstr ""
+
+#: /views/status/view.ctp:6
+msgid "Delete Status"
+msgstr ""
+
+#: /views/tecnologias/add.ctp:3
+#: /views/tecnologias/edit.ctp:3
+#: /views/tecnologias/index.ctp:3
+#: /views/tecnologias/search.ctp:3
+#: /views/tecnologias/view.ctp:3
+msgid "List Tecnologias"
+msgstr ""
+
+#: /views/tecnologias/add.ctp:4
+#: /views/tecnologias/edit.ctp:4
+#: /views/tecnologias/index.ctp:4
+#: /views/tecnologias/search.ctp:4
+#: /views/tecnologias/view.ctp:4
+msgid "Nova Tecnologia"
+msgstr ""
+
+#: /views/tecnologias/add.ctp:5
+#: /views/tecnologias/edit.ctp:5
+#: /views/tecnologias/index.ctp:5
+#: /views/tecnologias/search.ctp:5;10
+#: /views/tecnologias/view.ctp:5
+msgid "Buscar Tecnologias"
+msgstr ""
+
+#: /views/tecnologias/add.ctp:10
+msgid "Adicionar Tecnologia"
+msgstr ""
+
+#: /views/tecnologias/add.ctp:20
+msgid "Inventor (para selecionar mais de um inventor, utilize a tecla CTRL)"
+msgstr ""
+
+#: /views/tecnologias/edit.ctp:10
+msgid "Editar Tecnologia"
+msgstr ""
+
+#: /views/tecnologias/edit.ctp:92
+#: /views/tecnologias/view.ctp:68
+msgid "Tem certeza que deseja desassociar este inventor desta tecnologia?"
+msgstr ""
+
+#: /views/tecnologias/edit.ctp:106
+msgid "Não foi possível desassociar este inventor. Por favor recarregue a página e tente novamente."
+msgstr ""
+
+#: /views/tecnologias/index.ctp:10
+msgid "Tecnologias"
+msgstr ""
+
+#: /views/tecnologias/index.ctp:75
+msgid "Tem certeza que deseja excluir esta tecnologia?"
+msgstr ""
+
+#: /views/tecnologias/search.ctp:25;26
+msgid "Todas"
+msgstr ""
+
+#: /views/tecnologias/search.ctp:27;28
+msgid "Todos"
+msgstr ""
+
+#: /views/tecnologias/search.ctp:36
+msgid "Foram encontradas <strong>%d</strong> tecnologias com os critérios de busca escolhidos."
+msgstr ""
+
+#: /views/tecnologias/search.ctp:38
+msgid "Foi encontrada <strong>%d</strong> tecnologia com os critérios de busca escolhidos."
+msgstr ""
+
+#: /views/tecnologias/search.ctp:43
+msgid "Título"
+msgstr ""
+
+#: /views/tecnologias/view.ctp:6
+msgid "Edit Tecnologia"
+msgstr ""
+
+#: /views/tecnologias/view.ctp:7
+msgid "Delete Tecnologia"
+msgstr ""
+
+#: /views/tecnologias/view.ctp:13
+msgid "Detalhes da Tecnologia"
+msgstr ""
+
+#: /views/tecnologias/view.ctp:21
+msgid "Num Pedido"
+msgstr ""
+
+#: /views/tecnologias/view.ctp:68
+msgid "Desassociar"
+msgstr ""
+
+#: /webroot/test.php:88
+msgid "Debug setting does not allow access to this url."
+msgstr ""
+
