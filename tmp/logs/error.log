@@ -1,0 +1,18 @@
+2014-02-04 17:14:49 Error: [MissingControllerException] Controller class PatentesInternacionaisController could not be found.
+Exception Attributes: array (
+  'class' => 'PatentesInternacionaisController',
+  'plugin' => NULL,
+)
+Request URL: /controle-pi/patentes_internacionais/edit/257
+Stack Trace:
+#0 /var/www/controle-pi/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-02-04 17:15:00 Error: [MissingControllerException] Controller class TecnologiasController could not be found.
+Exception Attributes: array (
+  'class' => 'TecnologiasController',
+  'plugin' => NULL,
+)
+Request URL: /controle-pi/tecnologias
+Stack Trace:
+#0 /var/www/controle-pi/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
