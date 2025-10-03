@@ -11,27 +11,36 @@
 <?php echo $this->Form->create('Tecnologia',array());?>
 	<fieldset>
 	<?php
-		
+		// Seção 1 - Dados básicos da tecnologia
 		echo $this->Form->input('titulo', array('type' => 'text'));
 		echo $this->Form->input('num_pedido', array('type' => 'text'));
 		echo $this->Form->input('pasta', array('type' => 'text'));
 		echo $this->Form->input('pasta_juridico', array('type' => 'text'));
 		echo $this->Form->input('resumo');
-		
 		echo '<div class="input"><label>Número de Reivindicações</label>';
 		echo $this->Form->text('num_reivindicacoes', array('type'=>'number'));
 		echo '</div>';
-
 		echo $this->Form->input('reivindicacoes',array('label'=>'Quadro Reivindicatório'));
 		echo $this->Form->input('data', array('separator' => ' . ', 'dateFormat' => 'DMY', 'minYear' => date('Y') - 70, 'maxYear' => date('Y') + 2 ));
+		// Seção 2 - Dados adicionais
 		echo $this->Form->input('prioridade_interna_id', array('empty' => '', 'id'=>'prioridade_interna_id', 'label' => 'Prioridade Interna'));
+		echo $this->Form->input('certificado_adicao_id', array('empty' => '', 'id'=>'certificado_adicao_id', 'label' => 'Certificado de Adição','rows'=>'1'));
+		echo $this->Form->input('pais_id', array('empty' => '', 'label' => 'País'));
 		echo $this->Form->input('naturezatecnologia_id', array('empty' => '', 'label' => 'Natureza' ));
+		echo $this->Form->input('acompanhamento');
 		echo $this->Form->input('redator_id', array('empty' => '', 'label' => 'Redator'));
 		echo $this->Form->input('area_id', array('empty' => ''));
 		echo $this->Form->input('num_processo_sei', array('label'=>'Número do Processo SEI'));
 		echo $this->Form->input('tem_sisgen',array('empty' => '','label'=>'Acesso ao PG/CTA (patrimônio genético/conhecimento tradicional associado)?','options'=> array('0'=>'Não','1'=>'Sim')));
 		echo $this->Form->input('num_sisgen',array('div'=>array('style'=>'display:none;'),'label' => 'Número de cadastro no SisGen'));
-		echo $this->Form->input('status_id');
+		echo $this->Form->input('andamento_id');
+		echo $this->Form->input('status_id', array('label'=>'Status PI'));
+		// Seção 3 - Documentos
+		echo $this->Form->input('termo_de_participacao');
+		echo $this->Form->input('declaracao_do_inventor');
+		echo $this->Form->input('declaracao_de_cotitularidade');
+		echo $this->Form->input('contrato_de_cotitularidade');
+		echo $this->Form->input('observacoes',array('label'=>'Observações'));
 	?>
 		<div class="obs">Observação: As palavras-chave e os autores deverão ser adicionados após a adição da tecnologia.</div>
 	</fieldset>
