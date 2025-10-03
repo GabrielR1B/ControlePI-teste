@@ -1,5 +1,26 @@
 <?php
 class Knowhow extends AppModel {
+
+	private function requiredField($fieldLabel) {
+		return array(
+			'notempty' => array(
+				'rule' => array('notempty'),
+				'message' => "O campo $fieldLabel é obrigatório.",
+				'allowEmpty' => false,
+				'required' => true,
+			),
+		);
+	}
+	var $validate = array(
+		'titulo' => null,
+		'pasta' => null,
+	);
+	function __construct($id = false, $table = null, $ds = null) {
+		parent::__construct($id, $table, $ds);
+		$this->validate['titulo'] = $this->requiredField('Título');
+		$this->validate['pasta'] = $this->requiredField('Pasta');
+	}
+
 	var $name = 'Knowhow';
 	var $displayField = 'titulo';
 
