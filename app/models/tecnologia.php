@@ -16,14 +16,9 @@ class Tecnologia extends AppModel {
 	var $validate = array(
 		'titulo' => null,
 		'num_pedido' => null,
-		'data' => null,
 		'pasta' => null,
-		'natureza_id' => null,
-		'area_id' => null,
-		'status_id' => null,
 		'andamento_id' => null,
-		'redator_id' => null,
-		'pais_id' => null,
+		'natureza_id' => null,
 	);
 	function __construct($id = false, $table = null, $ds = null) {
 		parent::__construct($id, $table, $ds);
