@@ -1,5 +1,27 @@
 <?php
 class Desenho extends AppModel {
+	private function requiredField($fieldLabel) {
+		return array(
+			'notempty' => array(
+				'rule' => array('notempty'),
+				'message' => "O campo $fieldLabel é obrigatório.",
+				'allowEmpty' => false,
+				'required' => true,
+			),
+		);
+	}
+	var $validate = array(
+		'titulo' => null,
+		'num_pedido' => null,
+		'pasta' => null,
+	);
+	function __construct($id = false, $table = null, $ds = null) {
+		parent::__construct($id, $table, $ds);
+		$this->validate['titulo'] = $this->requiredField('Título');
+		$this->validate['num_pedido'] = $this->requiredField('Número do Pedido');
+		$this->validate['pasta'] = $this->requiredField('Pasta');
+	}
+
 	var $name = 'Desenho';
 	var $displayField = 'titulo';
 	//The Associations below have been created with all possible keys, those that are not needed can be removed
