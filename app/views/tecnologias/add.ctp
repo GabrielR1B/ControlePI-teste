@@ -35,13 +35,12 @@
 		echo $this->Form->input('num_sisgen',array('div'=>array('style'=>'display:none;'),'label' => 'Número de cadastro no SisGen'));
 		echo $this->Form->input('andamento_id');
 		echo $this->Form->input('status_id', array('label'=>'Status PI'));
-		// Seção 3 - Documentos
 		echo $this->Form->input('termo_de_participacao');
 		echo $this->Form->input('declaracao_do_inventor');
 		echo $this->Form->input('declaracao_de_cotitularidade');
 		echo $this->Form->input('contrato_de_cotitularidade');
 		echo $this->Form->input('observacoes',array('label'=>'Observações'));
-		// Seção 4 - Dados de Transferência
+		// Seção 3 - Dados de Transferência
 		echo '<label>Status da Transferência</label>';
 		echo $this->Form->input('st_ofertada',array('label'=>'Ofertada'));
 		echo $this->Form->input('st_em_negociacao',array('label'=>'Em Negociação'));

@@ -1,30 +1,29 @@
 <?php
 class Marca extends AppModel {
-	var $name = 'Marca';
-	var $displayField = 'nome';
-	
-	var $validate = array(
-		'nome' => array(
+
+	private function requiredField($fieldLabel) {
+		return array(
 			'notempty' => array(
 				'rule' => array('notempty'),
-				//'message' => 'Your custom message here',
-				//'allowEmpty' => false,
-				//'required' => false,
-				//'last' => false, // Stop validation after this rule
-				//'on' => 'create', // Limit validation to 'create' or 'update' operations
+				'message' => "O campo $fieldLabel é obrigatório.",
+				'allowEmpty' => false,
+				'required' => true,
 			),
-		),
-		'processo' => array(
-			'processo' => array(
-				'rule' => array('notempty'),
-				//'message' => 'Your custom message here',
-				//'allowEmpty' => false,
-				//'required' => false,
-				//'last' => false, // Stop validation after this rule
-				//'on' => 'create', // Limit validation to 'create' or 'update' operations
-			),
-		)
+		);
+	}
+	var $validate = array(
+		'titulo' => null,
+		'processo' => null,
+		'pasta' => null,
 	);
+	function __construct($id = false, $table = null, $ds = null) {
+		parent::__construct($id, $table, $ds);
+		$this->validate['titulo'] = $this->requiredField('Título');
+		$this->validate['processo'] = $this->requiredField('Número do Processo');
+		$this->validate['pasta'] = $this->requiredField('Pasta');
+	}
+	var $name = 'Marca';
+	var $displayField = 'nome';
 
 	var $belongsTo = array(
 		'NaturezaMarca' => array(
