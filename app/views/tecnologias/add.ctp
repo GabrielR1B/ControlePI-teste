@@ -50,7 +50,26 @@
 		echo $this->Form->input('st_vitrine_tecnologica',array('label'=>'Vitrine Tecnológica'));
 		echo $this->Form->input('observacoes_transferencia',array('label'=>'Observações da Transferência'));
 			?>
+	    <!-- Seção 4 - Titulares,  Departamentos e Unidades -->
 		<div class="obs">Observação: As palavras-chave e os autores deverão ser adicionados após a adição da tecnologia.</div>
+		<hr>
+		<h4>Inventores</h4>
+		<div class="input text">
+    		<label for="buscar_inventor">Buscar Inventor</label>
+    		<input type="text" id="buscar_inventor" />
+		</div>
+
+		<ul id="lista_inventores_selecionados">
+   		 </ul>
+
+		<div id="inventores_hidden_container">
+    	<?php
+        echo $this->Form->input('Inventor.Inventor', array('type' => 'hidden'));
+   			 ?>
+		</div>
+
+<?php
+echo $this->Form->end('Salvar Tecnologia');
 	</fieldset>	
 <?php echo $this->Form->end(__('Submit', true));?>
 </div>
@@ -88,7 +107,7 @@
 			tokenLimit: 1,
 			resultsFormatter: function(item){ return "<li>" + item.num_certificado + "<p>" + item.titulo + "</li>" }
 		});
-		
+
 		//Controla a exibição do input do número do certificado de adição
 	    $("#TecnologiaCertificadoAdicaoId").change(function() {
 	    	ExibirNumeroCertificadoAdicao(this.value);
@@ -111,4 +130,33 @@
 	    	$("#TecnologiaNumSisgen").val('');    		
 	    }
 	}
+	//Função para associar inventor
+	$("#buscar_inventor").autocomplete({
+    source: "<?php echo $this->Html->url( array('controller'=>'tecnologias', 'action'=>'ajaxListarInventores') ) ?>",
+    minLength: 2,
+    select: function( event, ui ) {
+        // ui.item.id e ui.item.nome vêm da resposta AJAX do autocomplete
+        adicionarInventorNaLista( ui.item.id, ui.item.nome );
+        
+        // Limpa o campo de busca para o usuário poder adicionar outro
+        $(this).val(''); 
+        return false;
+    }
+	});
+
+	// Função para adicionar o inventor selecionado na lista de inventores da tecnologia
+	function adicionarInventorNaLista(id, nome) {
+    
+    var itemVisual = "<li>" + nome + " <a href='#' class='remover-inventor' data-id='" + id + "'> (remover)</a></li>";
+    $("#lista_inventores_selecionados").append(itemVisual);
+    var inputOculto = "<input type='hidden' name='data[Inventor][Inventor][]' value='" + id + "' id='inventor_" + id + "'>";
+    $("#inventores_hidden_container").append(inputOculto);
+}
+
+	$(document).on('click', '.remover-inventor', function(e){
+    e.preventDefault();
+    var inventorId = $(this).data('id');
+    $('#inventor_' + inventorId).remove();
+    $(this).parent('li').remove();
+});
 </script>
