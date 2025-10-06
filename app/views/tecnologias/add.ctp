@@ -80,6 +80,29 @@
 	    	ExibirNumeroSisGen(this.value);
 	    });
 	});
+	$(document).ready(function() {
+		$("#certificado_adicao_id").tokenInput('/controle-pi/tecnologias/ajaxCertificados/', {
+			hintText: "Digite o número do certificado de adição",
+			preventDuplicates: true,
+			propertyToSearch: "num_certificado",
+			tokenLimit: 1,
+			resultsFormatter: function(item){ return "<li>" + item.num_certificado + "<p>" + item.titulo + "</li>" }
+		});
+		
+		//Controla a exibição do input do número do certificado de adição
+	    $("#TecnologiaCertificadoAdicaoId").change(function() {
+	    	ExibirNumeroCertificadoAdicao(this.value);
+	    });
+	});
+
+	function ExibirNumeroCertificadoAdicao(temCertificadoAdicao){
+		if(temCertificadoAdicao == 1){
+	    	$( "#TecnologiaCertificadoAdicaoId").parent().show();
+	    }else{
+	    	$("#TecnologiaCertificadoAdicaoId").parent().hide();
+	    	$("#TecnologiaCertificadoAdicaoId").val('');    		
+	    }
+	}
 	function ExibirNumeroSisGen(temNumeroSisGen){
 		if(temNumeroSisGen == 1){
 	    	$( "#TecnologiaNumSisgen").parent().show();
