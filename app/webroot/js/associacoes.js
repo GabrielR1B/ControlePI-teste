@@ -1,3 +1,5 @@
+// Dentro de /app/webroot/js/associacoes.js
+
 /**
  * Inicializa um campo de autocomplete para associar dados de um modelo relacionado.
  *
@@ -9,7 +11,6 @@
  */
 function associacaoAutocomplete(modelName, searchInputId, displayListId, hiddenContainerId, autocompleteUrl) {
 
-    // 1. Configura o Autocomplete no campo de busca
     $('#' + searchInputId).autocomplete({
         source: autocompleteUrl,
         minLength: 2,
@@ -17,16 +18,17 @@ function associacaoAutocomplete(modelName, searchInputId, displayListId, hiddenC
             var itemId = ui.item.id;
             var itemNome = ui.item.nome || ui.item.value;
 
+            // Verifica se um input oculto para este item ja existe.
             if ($('#' + modelName.toLowerCase() + '_' + itemId).length === 0) {
                 adicionarItemNaLista(itemId, itemNome);
             }
-
+            // Limpa o campo de busca independentemente de o item ter sido adicionado ou não
             $(this).val('');
             return false;
         }
     });
 
-    // 2. Função interna para adicionar o item na lista visual e nos inputs ocultos
+    // 2. Função para adicionar o item
     function adicionarItemNaLista(id, nome) {
         var itemVisual = "<li id='item_visual_" + modelName.toLowerCase() + "_" + id + "'>" + 
                          nome + 
