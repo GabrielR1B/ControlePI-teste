@@ -67,13 +67,25 @@
         echo $this->Form->input('Inventor.Inventor', array('type' => 'hidden'));
    			 ?>
 		</div>
+		<h4>Departamentos</h4>
+		<div class = "input text">
+			<label for ="buscar_departamento">Buscar Departamento</label>
+			<input type="text" id="buscar_departamento"/>
+		</div>
+		<ul id="lista_departamentos_selecionados">
+		</ul>
+		<div id="departamentos_hidden_container">
+			<?php
+			echo $this->Form->input('Departamento.Departamento', array('type' => 'hidden'));
+			?>
+		</div>
 
 <?php
 echo $this->Form->end('Salvar Tecnologia');
 	</fieldset>	
 <?php echo $this->Form->end(__('Submit', true));?>
 </div>
-			<div class ='input text area' >
+			<div class ='input text area' 
 
 			</div>
 
@@ -158,5 +170,33 @@ echo $this->Form->end('Salvar Tecnologia');
     var inventorId = $(this).data('id');
     $('#inventor_' + inventorId).remove();
     $(this).parent('li').remove();
+});
+
+	//Função para associar departamento
+	$("#buscar_departamento").autocomplete({
+	source: "<?php echo $this->Html->url( array('controller'=>'tecnologias', 'action'=>'ajaxListarDepartamentos') ) ?>",
+	minLength: 2,
+	select: function( event, ui ) {
+		// ui.item.id e ui.item.nome vêm da resposta AJAX do autocomplete
+		adicionarDepartamentoNaLista( ui.item.id, ui.item.nome );
+		
+		// Limpa o campo de busca para o usuário poder adicionar outro
+		$(this).val(''); 
+		return false;
+	}
+	});
+	// Função para adicionar o departamento selecionado na lista de departamentos da tecnologia
+	function adicionarDepartamentoNaLista(id, nome) {
+	
+	var itemVisual = "<li>" + nome + " <a href='#' class='remover-departamento' data-id='" + id + "'> (remover)</a></li>";
+	$("#lista_departamentos_selecionados").append(itemVisual);
+	var inputOculto = "<input type='hidden' name='data[Departamento][Departamento][]' value='" + id + "' id='departamento_" + id + "'>";
+	$("#departamentos_hidden_container").append(inputOculto);
+	}
+	$(document).on('click', '.remover-departamento', function(e){
+	e.preventDefault();
+	var departamentoId = $(this).data('id');
+	$('#departamento_' + departamentoId).remove();
+	$(this).parent('li').remove();
 });
 </script>
