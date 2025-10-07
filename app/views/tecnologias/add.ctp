@@ -1,5 +1,6 @@
 <!-- Carregando o script de associaçoes -->
 <?php echo $this->Html->script('associacoes'); ?>
+
 <div class="actions">
     <ul>
         <li><?php echo $this->Html->link(__('Listar Patentes', true), array('action' => 'index')); ?> </li>
@@ -35,75 +36,35 @@
         echo $this->Form->input('num_processo_sei', array('label'=>'Número do Processo SEI'));
         echo $this->Form->input('tem_sisgen',array('empty' => '','label'=>'Acesso ao PG/CTA (patrimônio genético/conhecimento tradicional associado)?','options'=> array('0'=>'Não','1'=>'Sim')));
         echo $this->Form->input('num_sisgen',array('div'=>array('style'=>'display:none;'),'label' => 'Número de cadastro no SisGen'));
-echo $this->Form->input('andamento_id');
+        echo $this->Form->input('andamento_id');
         echo $this->Form->input('status_id', array('label'=>'Status PI'));
-echo $this->Form->input('termo_de_participacao');
+        echo $this->Form->input('termo_de_participacao');
         echo $this->Form->input('declaracao_do_inventor');
-echo $this->Form->input('declaracao_de_cotitularidade');
-echo $this->Form->input('contrato_de_cotitularidade');
-echo $this->Form->input('observacoes',array('label'=>'Observações'));
-//Seção 3 - Dados de Transferencia
-echo '<label>Status da Transferência</label>';
-echo $this->Form->input('st_ofertada',array('label'=>'Ofertada'));
-echo $this->Form->input('st_em_negociacao',array('label'=>'Em Negociação'));
-echo $this->Form->input('st_licenciada',array('label'=>'Licenciada/Transferida'));
-echo $this->Form->input('st_parceria',array('label'=>'Parceria'));
-echo $this->Form->input('st_contrato_rescindido',array('label'=>'Contrato Rescindido'));
-echo $this->Form->input('st_vitrine_tecnologica',array('label'=>'Vitrine Tecnológica'));
-echo $this->Form->input('observacoes_transferencia',array('label'=>'Observações da Transferência'));
+        echo $this->Form->input('declaracao_de_cotitularidade');
+        echo $this->Form->input('contrato_de_cotitularidade');
+        echo $this->Form->input('observacoes',array('label'=>'Observações'));
+        echo '<hr>';
+        //Seção 3 - Dados de Transferencia
+        echo '<label>Status da Transferência</label>';
+        echo $this->Form->input('st_ofertada',array('label'=>'Ofertada'));
+        echo $this->Form->input('st_em_negociacao',array('label'=>'Em Negociação'));
+        echo $this->Form->input('st_licenciada',array('label'=>'Licenciada/Transferida'));
+        echo $this->Form->input('st_parceria',array('label'=>'Parceria'));
+        echo $this->Form->input('st_contrato_rescindido',array('label'=>'Contrato Rescindido'));
+        echo $this->Form->input('st_vitrine_tecnologica',array('label'=>'Vitrine Tecnológica'));
+        echo $this->Form->input('observacoes_transferencia',array('label'=>'Observações da Transferência'));
+        echo '<hr>';
+        //Seção 4, Titulares, Departaments, etc...
+        echo $this->FormGenerator->section('Titular','Titular','buscar_titular','lista_titulares_selecionados','titulares_hidden_container');
+        echo $this->FormGenerator->section('Inventor','Inventor','buscar_inventor','lista_inventores_selecionados','inventores_hidden_container');
+        echo $this->FormGenerator->section('Palavra-Chave','Palavra-Chave','buscar_palavra','lista_palavras_selecionados','palavras_hidden_container');
+
+
 
        
     ?>
-        <!-- Seção 4 - Titulares,  Departamentos e Unidades -->
-<hr>
-<h4>Titulares</h4>
-        <div class = "input text">
-            <label for ="buscar_titular">Buscar Titular</label>
-            <input type="text" id="buscar_titular"/>
-        </div>
-        <ul id="lista_titulares_selecionados">
-        </ul>
-        <div id="titulares_hidden_container">
-            <?php
-            echo $this->Form->input('Titular.Titular', array('type' => 'hidden'));
-            ?>
-</div>
-        <h4>Inventores</h4>
-        <div class="input text">
-            <label for="buscar_inventor">Buscar Inventor</label>
-            <input type="text" id="buscar_inventor" />
-        </div>
-
-        <ul id="lista_inventores_selecionados">
-         </ul>
-
-        <div id="inventores_hidden_container">
-        <?php
-        echo $this->Form->input('Inventor.Inventor', array('type' => 'hidden'));
-             ?>
-        </div>
-<h4>Palavras-chave</h4>
-        <div class = "input text">
-            <label for ="buscar_palavra">Buscar Palavra-chave</label>
-            <input type="text" id="buscar_palavra"/>
-        </div>
-        <ul id="lista_palavras_selecionados">
-        </ul>
-        <div id="palavras_hidden_container">
-            <?php
-            echo $this->Form->input('Palavrachave.Palavrachave', array('type' => 'hidden'));
-            ?>
-</div>
-    </fieldset>
-   
-<?php echo $this->Form->end(__('Submit', true));?>
-</div>
-            <div class ='input text area' >
-
-            </div>
-
 <script type="text/javascript">
-    <!--
+    // Controla a exibição dos inputs de número do SisGen e Certificado de Adição
     function showMe (it1, it2, box) {
       var vis = (box.checked) ? "block" : "none";
       document.getElementById(it1).style.display = vis;
@@ -155,7 +116,9 @@ echo $this->Form->input('observacoes_transferencia',array('label'=>'Observaçõe
             $("#TecnologiaNumSisgen").val('');          
         }
     }
-$(document).ready(function() {
+
+    // Inicializa a exibição correta dos inputs ao carregar a página
+    $(document).ready(function() {
         associacaoAutocomplete(
             'Titular',
             'buscar_titular',
@@ -171,11 +134,11 @@ $(document).ready(function() {
             '<?php echo $this->Html->url(["controller" => "tecnologias", "action" => "ajaxListarInventores"]); ?>'
         );
         associacaoAutocomplete(
-			'Palavrachave',
-			'buscar_palavra',
-			'lista_palavras_selecionados',
-			'palavras_hidden_container',
-			'<?php echo $this->Html->url(["controller" => "tecnologias", "action" => "ajaxListarPalavraschave"]); ?>'
-		);
+            'Palavrachave',
+            'buscar_palavra',
+            'lista_palavras_selecionados',
+            'palavras_hidden_container',
+            '<?php echo $this->Html->url(["controller" => "tecnologias", "action" => "ajaxListarPalavraschave"]); ?>'
+        );
 });
 </script>
