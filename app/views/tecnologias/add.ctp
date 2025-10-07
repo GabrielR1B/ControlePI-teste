@@ -82,42 +82,6 @@ echo $this->Form->input('observacoes_transferencia',array('label'=>'Observaçõe
         echo $this->Form->input('Inventor.Inventor', array('type' => 'hidden'));
              ?>
         </div>
-<h4>Departamentos</h4>
-        <div class = "input text">
-            <label for ="buscar_departamento">Buscar Departamento</label>
-            <input type="text" id="buscar_departamento"/>
-        </div>
-        <ul id="lista_departamentos_selecionados">
-        </ul>
-        <div id="departamentos_hidden_container">
-            <?php
-            echo $this->Form->input('Departamento.Departamento', array('type' => 'hidden'));
-            ?>
-</div>
-<h4>Empresas</h4>
-        <div class = "input text">
-            <label for ="buscar_empresa">Buscar Empresa</label>
-            <input type="text" id="buscar_empresa"/>
-        </div>
-        <ul id="lista_empresas_selecionados">
-        </ul>
-        <div id="empresas_hidden_container">
-            <?php
-            echo $this->Form->input('Empresa.Empresa', array('type' => 'hidden'));
-            ?>
-</div>
-<h4>Areas de Conhecimento</h4>
-        <div class = "input text">
-            <label for ="buscar_area">Buscar Area</label>
-            <input type="text" id="buscar_area"/>
-        </div>
-        <ul id="lista_areas_selecionados">
-        </ul>
-        <div id="areas_hidden_container">
-            <?php
-            echo $this->Form->input('Area.Area', array('type' => 'hidden'));
-            ?>
-</div>
 <h4>Palavras-chave</h4>
         <div class = "input text">
             <label for ="buscar_palavra">Buscar Palavra-chave</label>
@@ -196,7 +160,7 @@ $(document).ready(function() {
             'Titular',
             'buscar_titular',
             'lista_titulares_selecionados',
-            'titular_hidden_container',
+            'titulares_hidden_container',
             '<?php echo $this->Html->url(["controller" => "tecnologias", "action" => "ajaxListarTitulares"]); ?>'
         );
         associacaoAutocomplete(
@@ -207,31 +171,10 @@ $(document).ready(function() {
             '<?php echo $this->Html->url(["controller" => "tecnologias", "action" => "ajaxListarInventores"]); ?>'
         );
         associacaoAutocomplete(
-            'Departamento',
-            'buscar_departamento',
-            'lista_departamentos_selecionados',
-            'departamento_hidden_container',
-            '<?php echo $this->Html->url(["controller" => "tecnologias", "action" => "ajaxListarDepartamentos"]); ?>'
-        );
-        associacaoAutocomplete(
-            'Empresa',
-            'buscar_empresa',
-            'lista_empresas_selecionados',
-            'empresa_hidden_container',
-            '<?php echo $this->Html->url(["controller" => "empresas", "action" => "ajaxListarEmpresas"]); ?>'
-        );
-        associacaoAutocomplete(
-            'Area',
-            'buscar_area',
-            'lista_areas_selecionados',
-            'area_hidden_container',
-            '<?php echo $this->Html->url(["controller" => "areas_conhecimento", "action" => "ajaxListar"]); ?>'
-        );
-        associacaoAutocomplete(
 			'Palavrachave',
 			'buscar_palavra',
 			'lista_palavras_selecionados',
-			'palavra_hidden_container',
+			'palavras_hidden_container',
 			'<?php echo $this->Html->url(["controller" => "tecnologias", "action" => "ajaxListarPalavraschave"]); ?>'
 		);
 });
