@@ -192,8 +192,7 @@ echo $this->Form->input('observacoes_transferencia',array('label'=>'Observaçõe
         }
     }
 $(document).ready(function() {
-        // Inicializa para Inventores
-associacaoAutocomplete(
+        associacaoAutocomplete(
             'Titular',
             'buscar_titular',
             'lista_titulares_selecionados',
@@ -207,28 +206,28 @@ associacaoAutocomplete(
             'inventores_hidden_container',
             '<?php echo $this->Html->url(["controller" => "tecnologias", "action" => "ajaxListarInventores"]); ?>'
         );
-associacaoAutocomplete(
+        associacaoAutocomplete(
             'Departamento',
             'buscar_departamento',
             'lista_departamentos_selecionados',
             'departamento_hidden_container',
             '<?php echo $this->Html->url(["controller" => "tecnologias", "action" => "ajaxListarDepartamentos"]); ?>'
         );
-associacaoAutocomplete(
+        associacaoAutocomplete(
             'Empresa',
             'buscar_empresa',
             'lista_empresas_selecionados',
             'empresa_hidden_container',
             '<?php echo $this->Html->url(["controller" => "empresas", "action" => "ajaxListarEmpresas"]); ?>'
         );
-associacaoAutocomplete(
+        associacaoAutocomplete(
             'Area',
             'buscar_area',
             'lista_areas_selecionados',
             'area_hidden_container',
             '<?php echo $this->Html->url(["controller" => "areas_conhecimento", "action" => "ajaxListar"]); ?>'
         );
-associacaoAutocomplete(
+        associacaoAutocomplete(
 			'Palavrachave',
 			'buscar_palavra',
 			'lista_palavras_selecionados',
