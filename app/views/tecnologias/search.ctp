@@ -21,37 +21,48 @@
 
 		<fieldset>
 		<?php
-			echo $this->Form->input('pasta', array('label' => 'Pasta', 'type' => 'text'));
-			echo $this->Form->input('pasta_juridico', array('label' => 'Pasta Jurídico', 'type' => 'text'));
-			echo $this->Form->input('num_pedido', array('label' => 'Número do pedido', 'type' => 'text'));
-			echo $this->Form->input('titulo', array('label' => 'Título', 'type' => 'text'));
-			echo $this->Form->input('resumo', array('label' => 'Resumo', 'type' => 'text'));
-			echo $this->Form->input('reivindicacoes', array('label' => 'Quadro Reivindicatório', 'type' => 'text'));
-
-			echo '<div class="input"><label>Número de Reivindicações</label>';
-			echo $this->Form->text('num_reivindicacoes', array('type'=>'number'));
-			echo '</div>';
-
-			echo $this->Form->input('num_processo_sei',array('label'=>'Número do Processo SEI'));
-			echo $this->Form->input('area_id', array('empty' => __('Todas', true) ));
-			echo $this->Form->input('area_conhecimento_id', array('empty' => __('Todas', true),'options'=>$areas_conhecimento));
-			echo $this->Form->input('titular_id', array('empty' => __('Todos', true) ));
-			echo $this->Form->input('acompanhamento_id', array('empty' => __('Todos', true),'options'=>array('1'=>'UFMG','2'=>'Terceiros')));
-			echo $this->Form->input('status_id', array('empty' => __('Todos', true)));
-			echo $this->Form->input('status_transferencia_id', array('empty' => __('Todos', true),'options'=> $status_transferencia ));
-			echo $this->Form->input('unidade_id', array('empty' => __('Todas', true) ));
-			echo $this->Form->input('departamento_id', array('empty' => __('Todos', true) ));
-			echo $this->Form->input('andamento_id', array('empty' => __('Todos', true) ));
-			echo $this->Form->input('Inventor', array('type' => 'select','empty' => __('Todos', true) ));
-			echo $this->Form->input('redator_id', array('label'=>'Redator', 'type' => 'select','empty' => __('Todos', true) ));
-			//echo $this->Form->input('desde', array('label'=>'Data de Início', 'type' => 'date'));
-			echo $this->Form->input('mesDe', array('type' => 'select', 'class' => 'mesDe','empty' => __('Mês', true), 'label' => 'De' ));
-			echo $this->Form->input('desde', array('type' => 'select', 'class' => 'anoDe', 'empty' => __('Ano', true), 'label' => '' ));
-			echo $this->Form->input('mesAte', array('type' => 'select', 'class' => 'mesAte','empty' => __('Mês', true), 'label' => 'Até' ));
-			echo $this->Form->input('ate', array('type' => 'select', 'class' => 'anoAte','empty' => __('Ano', true), 'label' => '' ));		
-			echo $this->Form->input('prioridade_interna', array('type'=>'checkbox','format' => array('before', 'input', 'between', 'label', 'after', 'error' )));
-			echo $this->Form->input('pct', array('type'=>'checkbox','label'=>'PCT'));
-            echo $this->Form->input('palavrachave',array('id'=>'palavrachave_id_input','label'=>'Palavras-chave')); 
+		// Secao 1 - Dados Basicos
+        echo $this->Form->input('titulo', array('label' => 'Título', 'type' => 'text'));
+        echo $this->Form->input('num_pedido', array('label' => 'Número do pedido', 'type' => 'text'));
+        echo $this->Form->input('pasta', array('label' => 'Pasta', 'type' => 'text'));
+        echo $this->Form->input('pasta_juridico', array('label' => 'Pasta Jurídico', 'type' => 'text'));
+        echo $this->Form->input('resumo', array('label' => 'Resumo', 'type' => 'text'));
+        echo '<div class="input"><label>Número de Reivindicações</label>';
+        echo $this->Form->text('num_reivindicacoes', array('label' => 'Número de Reivindicações' ,'type'=>'number'));
+        echo '</div>';
+        echo $this->Form->input('reivindicacoes', array('label' => 'Quadro Reivindicatório', 'type' => 'text'));
+        // # Datas não funcionam, investigar depois
+        //echo $this->Form->input('desde', array('label'=>'Data de Início', 'type' => 'date'));
+        //echo $this->Form->input('mesDe', array('type' => 'select', 'class' => 'mesDe','empty' => __('Mês', true), 'label' => 'De' ));
+        //echo $this->Form->input('desde', array('type' => 'select', 'class' => 'anoDe', 'empty' => __('Ano', true), 'label' => '' ));
+    	//echo $this->Form->input('mesAte', array('type' => 'select', 'class' => 'mesAte','empty' => __('Mês', true), 'label' => 'Até' ));
+        //echo $this->Form->input('ate', array('type' => 'select', 'class' => 'anoAte','empty' => __('Ano', true), 'label' => '' ));
+		//datas não funcionam, investigar melhor o porque
+		//echo $this->Form->input('desde', array('label'=>'Data de Início', 'type' => 'date'));
+		//echo $this->Form->input('mesDe', array('type' => 'select', 'class' => 'mesDe','empty' => __('Mês', true), 'label' => 'De' ));
+		//echo $this->Form->input('desde', array('type' => 'select', 'class' => 'anoDe', 'empty' => __('Ano', true), 'label' => '' ));
+		//echo $this->Form->input('mesAte', array('type' => 'select', 'class' => 'mesAte','empty' => __('Mês', true), 'label' => 'Até' ));
+		//echo $this->Form->input('ate', array('type' => 'select', 'class' => 'anoAte','empty' => __('Ano', true), 'label' => '' ));
+            	echo '<hr>';
+        // Seção 2 - Dados adicionais
+		echo $this->Form->input('acompanhamento_id', array('empty' => __('Todos', true),'options'=>array('1'=>'UFMG','2'=>'Terceiros')));
+		echo $this->Form->input('redator_id', array('label'=>'Redator', 'type' => 'select','empty' => __('Todos', true) ));
+		echo $this->Form->input('area_id', array('empty' => __('Todas', true) ));
+		echo $this->Form->input('num_processo_sei',array('label'=>'Número do Processo SEI'));
+		echo $this->Form->input('andamento_id', array('empty' => __('Todos', true) ));
+		//area conhecimento quebrado investigar 
+	        //echo $this->Form->input('area_conhecimento_id', array('empty' => __('Todas', true),'options'=>$areas_conhecimento));
+		echo $this->Form->input('status_id', array('empty' => __('Todos', true)));
+		echo $this->Form->input('status_transferencia_id', array('empty' => __('Todos', true),'options'=> $status_transferencia ));
+		echo $this->Form->input('titular_id', array('empty' => __('Todos', true) ));	
+		echo $this->Form->input('Inventor', array('type' => 'select','empty' => __('Todos', true) ));
+		echo $this->Form->input('departamento_id', array('empty' => __('Todos', true) ));
+		echo $this->Form->input('unidade_id', array('empty' => __('Todas', true) ));
+		echo '<hr>';
+		//Seção 3 - Extras
+		echo $this->Form->input('prioridade_interna', array('type'=>'checkbox','format' => array('before', 'input', 'between', 'label', 'after', 'error' )));
+		echo $this->Form->input('pct', array('type'=>'checkbox','label'=>'PCT'));
+            	echo $this->Form->input('palavrachave',array('id'=>'palavrachave_id_input','label'=>'Palavras-chave')); 
 		?>
 			<label>Operador Lógico das Palavras-chave</label>
 			<select name="data[Tecnologia][operador]">
