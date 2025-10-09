@@ -63,6 +63,7 @@
 
        
     ?>
+    <?php echo $this->Form->end(__('Submit', true));?>
 <script type="text/javascript">
     // Controla a exibição dos inputs de número do SisGen e Certificado de Adição
     function showMe (it1, it2, box) {
