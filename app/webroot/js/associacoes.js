@@ -1,4 +1,3 @@
-// Dentro de /app/webroot/js/associacoes.js
 
 /**
  * Inicializa um campo de autocomplete para associar dados de um modelo relacionado.

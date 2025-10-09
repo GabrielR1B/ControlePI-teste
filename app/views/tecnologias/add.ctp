@@ -1,6 +1,5 @@
 <!-- Carregando o script de associaçoes -->
 <?php echo $this->Html->script('associacoes'); ?>
-<?php echo $this->Html->script('display_field'); ?>
 
 <div class="actions">
     <ul>
@@ -101,8 +100,22 @@
         });
     });
 
-    display_field(temcertificadoadicao, 'TecnologiaCertificadoAdicaoId');
-    display_field(temNumeroSisGen, 'TecnologiaNumSisgen');
+    function ExibirNumeroCertificadoAdicao(temCertificadoAdicao){
+        if(temCertificadoAdicao == 1){
+            $( "#TecnologiaCertificadoAdicaoId").parent().show();
+        }else{
+            $("#TecnologiaCertificadoAdicaoId").parent().hide();
+            $("#TecnologiaCertificadoAdicaoId").val('');            
+        }
+    }
+    function ExibirNumeroSisGen(temNumeroSisGen){
+        if(temNumeroSisGen == 1){
+            $( "#TecnologiaNumSisgen").parent().show();
+        }else{
+            $("#TecnologiaNumSisgen").parent().hide();
+            $("#TecnologiaNumSisgen").val('');          
+        }
+    }
 
     // Inicializa a exibição correta dos inputs ao carregar a página
     $(document).ready(function() {
