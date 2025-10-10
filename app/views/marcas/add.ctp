@@ -64,4 +64,5 @@
             '<?php echo $this->Html->url(["controller" => "tecnologias", "action" => "ajaxListarInventores"]); ?>'
         );
 });
+</script>
 </div>
