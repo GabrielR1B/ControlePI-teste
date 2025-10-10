@@ -1,6 +1,9 @@
+<!-- Carregando o script de associaçoes -->
+<?php echo $this->Html->script('associacoes'); ?>
 <div class="actions">
 	<ul>
 		<li><?php echo $this->Html->link(('Listar Knowhow'), array('action' => 'index'));?></li>
+		<li><?php echo $this->Html->link(('Buscar Knowhow'), array('action' => 'search'));?></li>
 	</ul>
 </div>
 
@@ -22,6 +25,8 @@
 		echo $this->Form->input('titular_id', array('empty' => ''));
 		echo $this->Form->input('area_id', array('empty' => ''));
 		echo $this->Form->input('status_id', array('empty' => ''));
+		echo $this->Form->input('observacoes');
+		echo '<hr>';
 
 		// Seção 3 - Dados de Transferência
 		echo '<label>Status da Transferência</label>';
@@ -32,8 +37,23 @@
 		echo $this->Form->input('st_contrato_rescindido',array('label'=>'Contrato Rescindido'));
 		echo $this->Form->input('st_vitrine_tecnologica',array('label'=>'Vitrine Tecnológica'));
 		echo $this->Form->input('observacoes_transferencia',array('label'=>'Observações da Transferência'));
-		echo $this->Form->input('observacoes');
+		echo '<hr>';
+		// Seção 4, Titulares, Departaments, etc...
+		echo $this->FormGenerator->section('Inventor','Inventor','buscar_inventor','lista_inventores_selecionados','inventores_hidden_container');
+
 	?>
 	</fieldset>
 <?php echo $this->Form->end(__('Submit', true));?>
+<script type ="text/javascript">
+	// Inicializa a exibição correta dos inputs ao carregar a página
+	$(document).ready(function() {
+		associacaoAutocomplete(
+			'Inventor',
+			'buscar_inventor',
+			'lista_inventores_selecionados',
+			'inventores_hidden_container',
+			'<?php echo $this->Html->url(["controller" => "tecnologias", "action" => "ajaxListarInventores"]); ?>'
+		);
+});
+</script>
 </div>

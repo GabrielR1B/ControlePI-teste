@@ -3,7 +3,6 @@
 <div class="actions">
 	<ul>
 		<li><?php echo $this->Html->link(__('Listar Marcas', true), array('action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('Nova Marca', true), array('action' => 'add')); ?> </li>
 		<li><?php echo $this->Html->link(__('Buscar Marca', true), array('action' => 'search')); ?></li>
 	</ul>
 </div>
